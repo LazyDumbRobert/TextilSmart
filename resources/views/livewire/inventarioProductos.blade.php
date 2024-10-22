@@ -24,6 +24,14 @@
                             {{ ($producto->activo == 1) ? 'ACTIVO' : 'NO ACTIVO'}}
                         </button>
                     </td>
+                    <td class="registro flex flex-row gap-5">
+                        <a href="{{ route('inventario.producto.edit',$producto) }}">
+                            <i class="fa-solid fa-pen-to-square text-2xl hover:text-gray-600"></i>
+                        </a>
+                        <button>
+                            <i class="fa-solid fa-trash text-2xl hover:text-gray-600"></i>
+                        </button>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

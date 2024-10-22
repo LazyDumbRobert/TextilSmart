@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto;
+use App\Models\MateriaPrima;
 use Illuminate\Http\Request;
 
-class InventarioController extends Controller
+class InventarioMPController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('inventario.index');
+        return view('inventarioMP.index');
     }
 
     /**
@@ -42,9 +42,9 @@ class InventarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(MateriaPrima $materiaprima)
     {
-        //
+        return view('inventarioMP.edit',compact('materiaprima'));
     }
 
     /**

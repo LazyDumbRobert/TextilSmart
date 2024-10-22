@@ -14,11 +14,9 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id(); 
             $table->string('nombre'); 
-            $table->string('tipo'); 
-            $table->decimal('precio_por_metro', 10, 2); 
+            $table->decimal('precio_unitario', 10, 2); 
             $table->integer('stock')->default(0); 
             $table->string('imagen')->nullable(); 
-            $table->string('color'); 
             $table->boolean('activo')->default(true); 
             $table->timestamps(); 
         });

@@ -7,6 +7,6 @@
 @section('contenido')
     <h2 class="text-xl font-bold">Control de Inventario</h2>
     <div class="p-10">
-        <livewire:inventario />
+        <livewire:inventarioProductos />
     </div>
 @endsection

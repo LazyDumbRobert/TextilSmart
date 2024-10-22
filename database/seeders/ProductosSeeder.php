@@ -9,100 +9,41 @@ class ProductosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
-        DB::table('productos')->insert([
-            [
-                'nombre' => 'Algodón Premium',
-                'tipo' => 'Algodón',
-                'precio_por_metro' => 12.99,
-                'stock' => 100,
-                'color' => 'Blanco',
-                'activo' => true,
-                'imagen' => 'algodon_premium.png', // Nombre de la imagen
-            ],
-            [
-                'nombre' => 'Satin de Seda',
-                'tipo' => 'Seda',
-                'precio_por_metro' => 25.50,
-                'stock' => 50,
-                'color' => 'Rojo',
-                'activo' => true,
-                'imagen' => 'satin_seda.png',
-            ],
-            [
-                'nombre' => 'Lino Natural',
-                'tipo' => 'Lino',
-                'precio_por_metro' => 18.75,
-                'stock' => 30,
-                'color' => 'Beige',
-                'activo' => true,
-                'imagen' => 'lino_natural.png',
-            ],
-            [
-                'nombre' => 'Poliéster Brillante',
-                'tipo' => 'Poliéster',
-                'precio_por_metro' => 8.99,
-                'stock' => 200,
-                'color' => 'Negro',
-                'activo' => true,
-                'imagen' => 'poliester_brillante.png',
-            ],
-            [
-                'nombre' => 'Tejido de Punto',
-                'tipo' => 'Punto',
-                'precio_por_metro' => 10.50,
-                'stock' => 75,
-                'color' => 'Azul',
-                'activo' => true,
-                'imagen' => 'tejido_punto.png',
-            ],
-            [
-                'nombre' => 'Franela Suave',
-                'tipo' => 'Franela',
-                'precio_por_metro' => 15.00,
-                'stock' => 40,
-                'color' => 'Gris',
-                'activo' => true,
-                'imagen' => 'franela_suave.png',
-            ],
-            [
-                'nombre' => 'Terciopelo',
-                'tipo' => 'Terciopelo',
-                'precio_por_metro' => 20.00,
-                'stock' => 20,
-                'color' => 'Verde',
-                'activo' => true,
-                'imagen' => 'terciopelo.png',
-            ],
-            [
-                'nombre' => 'Chiffon Ligero',
-                'tipo' => 'Chiffon',
-                'precio_por_metro' => 14.50,
-                'stock' => 60,
-                'color' => 'Rosa',
-                'activo' => true,
-                'imagen' => 'chiffon_ligero.png',
-            ],
-            [
-                'nombre' => 'Twill de Algodón',
-                'tipo' => 'Algodón',
-                'precio_por_metro' => 11.75,
-                'stock' => 90,
-                'color' => 'Caqui',
-                'activo' => true,
-                'imagen' => 'twill_algodon.png',
-            ],
-            [
-                'nombre' => 'Denim',
-                'tipo' => 'Denim',
-                'precio_por_metro' => 17.99,
-                'stock' => 25,
-                'color' => 'Azul Oscuro',
-                'activo' => true,
-                'imagen' => 'denim.png',
-            ],
-        ]);
+        $productos = [
+            ['nombre' => 'Pantalón de mezclilla', 'precio_unitario' => 29.99, 'stock' => 50, 'imagen' => 'pantalon_mezclilla.jpg'],
+            ['nombre' => 'Camisa de algodón', 'precio_unitario' => 19.99, 'stock' => 30, 'imagen' => 'camisa_algodon.jpg'],
+            ['nombre' => 'Suéter de lana', 'precio_unitario' => 39.99, 'stock' => 20, 'imagen' => 'sweater_lana.jpg'],
+            ['nombre' => 'Chaqueta de cuero', 'precio_unitario' => 89.99, 'stock' => 15, 'imagen' => 'chaqueta_cuero.jpg'],
+            ['nombre' => 'Vestido de verano', 'precio_unitario' => 24.99, 'stock' => 25, 'imagen' => 'vestido_verano.jpg'],
+            ['nombre' => 'Camiseta básica', 'precio_unitario' => 9.99, 'stock' => 100, 'imagen' => 'camiseta_basica.jpg'],
+            ['nombre' => 'Pantalón corto', 'precio_unitario' => 19.99, 'stock' => 40, 'imagen' => 'pantalon_corto.jpg'],
+            ['nombre' => 'Abrigo de invierno', 'precio_unitario' => 99.99, 'stock' => 10, 'imagen' => 'abrigo_invierno.jpg'],
+            ['nombre' => 'Camisa de franela', 'precio_unitario' => 29.99, 'stock' => 35, 'imagen' => 'camisa_franela.jpg'],
+            ['nombre' => 'Leggings', 'precio_unitario' => 19.99, 'stock' => 60, 'imagen' => 'leggings.jpg'],
+            ['nombre' => 'Blusa de seda', 'precio_unitario' => 34.99, 'stock' => 20, 'imagen' => 'blusa_seda.jpg'],
+            ['nombre' => 'Cárdigan', 'precio_unitario' => 49.99, 'stock' => 30, 'imagen' => 'cardigan.jpg'],
+            ['nombre' => 'Chaleco', 'precio_unitario' => 39.99, 'stock' => 25, 'imagen' => 'chaleco.jpg'],
+            ['nombre' => 'Pantalón de vestir', 'precio_unitario' => 49.99, 'stock' => 20, 'imagen' => 'pantalon_vestir.jpg'],
+            ['nombre' => 'Falda', 'precio_unitario' => 24.99, 'stock' => 40, 'imagen' => 'falda.jpg'],
+            ['nombre' => 'Sudadera', 'precio_unitario' => 34.99, 'stock' => 30, 'imagen' => 'sudadera.jpg'],
+            ['nombre' => 'Shorts deportivos', 'precio_unitario' => 19.99, 'stock' => 50, 'imagen' => 'shorts_deportivos.jpg'],
+            ['nombre' => 'Camisa de vestir', 'precio_unitario' => 39.99, 'stock' => 15, 'imagen' => 'camisa_vestir.jpg'],
+            ['nombre' => 'Pantalón cargo', 'precio_unitario' => 29.99, 'stock' => 25, 'imagen' => 'pantalon_cargo.jpg'],
+            ['nombre' => 'Mono de trabajo', 'precio_unitario' => 79.99, 'stock' => 10, 'imagen' => 'mono_trabajo.jpg'],
+            ['nombre' => 'Bañador', 'precio_unitario' => 29.99, 'stock' => 20, 'imagen' => 'banador.jpg'],
+            ['nombre' => 'Pijama', 'precio_unitario' => 34.99, 'stock' => 30, 'imagen' => 'pijama.jpg'],
+            ['nombre' => 'Camisa de rayas', 'precio_unitario' => 24.99, 'stock' => 15, 'imagen' => 'camisa_rayas.jpg'],
+            ['nombre' => 'Culottes', 'precio_unitario' => 29.99, 'stock' => 25, 'imagen' => 'culottes.jpg'],
+            ['nombre' => 'Bolsos de tela', 'precio_unitario' => 19.99, 'stock' => 50, 'imagen' => 'bolso_tela.jpg'],
+            ['nombre' => 'Guantes de lana', 'precio_unitario' => 14.99, 'stock' => 75, 'imagen' => 'guantes_lana.jpg'],
+            ['nombre' => 'Bufanda', 'precio_unitario' => 19.99, 'stock' => 40, 'imagen' => 'bufanda.jpg'],
+        ];
+
+        DB::table('productos')->insert($productos);
     }
 }

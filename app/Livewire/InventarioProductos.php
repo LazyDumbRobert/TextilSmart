@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Producto;
 use Livewire\WithPagination;
 
-class Inventario extends Component
+class InventarioProductos extends Component
 {
     use WithPagination;
 
@@ -15,7 +15,7 @@ class Inventario extends Component
     public function render()
     {
         $productos = Producto::paginate(5);
-        return view('livewire.inventario',['productos' => $productos]);
+        return view('livewire.inventarioProductos',['productos' => $productos]);
     }
 
     public function cambiarEstado(Producto $producto)

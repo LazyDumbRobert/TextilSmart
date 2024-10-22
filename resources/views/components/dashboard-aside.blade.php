@@ -5,17 +5,23 @@
         </div>
 
         <div class="flex flex-col justify-between flex-1 mt-10">
-            <nav class="flex flex-col gap-10 uppercase font-bold">
+            <nav class="flex flex-col gap-5 uppercase font-bold text-xs">
 
                 <a href="{{ route('dashboard') }}" class="{{  Route::is('dashboard*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300   hover:text-white rounded">
                     <i class="fa-solid fa-house"></i>
                     Dashboard
                 </a>
 
-                <a href="{{ route('inventario') }}" class="{{  Route::is('inventario*') ? 'bg-indigo-900 text-white' : '' }} p-2 hover:bg-indigo-900 transition-colors duration-300 hover:text-white rounded">
+                <a href="{{ route('inventarioProductos') }}" class="{{  Route::is('inventarioProductos*') ? 'bg-indigo-900 text-white' : '' }} p-2 hover:bg-indigo-900 transition-colors duration-300 hover:text-white rounded">
                     <i class="fa-solid fa-warehouse"></i>
-                    Inventario
+                    Inventario Productos
                 </a>
+
+                <a href="{{ route('inventarioMP') }}" class="{{  Route::is('inventarioMP*') ? 'bg-indigo-900 text-white' : '' }} p-2 hover:bg-indigo-900 transition-colors duration-300 hover:text-white rounded">
+                    <i class="fa-solid fa-warehouse"></i>
+                    Inventario Materia Prima
+                </a>
+
                 <a href="" class="{{  Route::is('produccion*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
                     <i class="fa-solid fa-database"></i>
                     Producción
