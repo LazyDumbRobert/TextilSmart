@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Product;
+use App\Models\Producto;
 
 class ProductService
 {
@@ -22,17 +23,17 @@ class ProductService
         return self::$instance;
     }
 
-    public function create(array $data): Product
+    public function create(array $data): Producto
     {
-        return Product::create($data);
+        return Producto::create($data);
     }
 
-    public function read(int $id): ?Product
+    public function read(int $id): ?Producto
     {
-        return Product::find($id);
+        return Producto::find($id);
     }
 
-    public function update(int $id, array $data): ?Product
+    public function update(int $id, array $data): ?Producto
     {
         $product = $this->read($id);
         if ($product) {
@@ -53,6 +54,6 @@ class ProductService
 
     public function getAll(): \Illuminate\Database\Eloquent\Collection
     {
-        return Product::all();
+        return Producto::all();
     }
 }
