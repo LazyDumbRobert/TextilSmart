@@ -28,6 +28,7 @@ class ReabastecimientoService
             'cantidad' => $producto->cantidad_reabastecer,
             'proveedor_id' => $producto->proveedor_id,
             'estado_id' => 1, 
+            'cantidad_disponible_anterior' => $producto->cantidad_disponible, 
         ]);
 
         $usuario = User::find(5);

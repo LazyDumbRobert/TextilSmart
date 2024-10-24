@@ -23,4 +23,5 @@ Route::middleware('auth')->group(function () {
 Route::get('/notificaciones',NotificacionController::class)->middleware(['auth', 'verified','role.admin'])->name('notificaciones');
 
 require __DIR__.'/auth.php';
-require __DIR__.'/inventory.php';
+require __DIR__.'/inventario.php';
+require __DIR__.'/proveedores.php';

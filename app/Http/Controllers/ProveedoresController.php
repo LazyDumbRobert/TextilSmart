@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrdenCompra;
 use Illuminate\Http\Request;
 
-class OrdenCompraController extends Controller
+class ProveedoresController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('oc.index');
+        return view('proveedores.index');
     }
 
     /**
@@ -20,7 +19,7 @@ class OrdenCompraController extends Controller
      */
     public function create()
     {
-        return view('oc.create');
+        return view('proveedores.create');
     }
 
     /**
@@ -34,9 +33,9 @@ class OrdenCompraController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(OrdenCompra $ordencompra)
+    public function show(string $id)
     {
-        return view('oc.show',compact('ordencompra'));
+        //
     }
 
     /**

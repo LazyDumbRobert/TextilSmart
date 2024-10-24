@@ -12,6 +12,7 @@ class OrdenCompra extends Model
         'proveedor_id',
         'cantidad',
         'estado_id',
+        'cantidad_disponible_anterior',
     ];
 
     public function materiaPrima()

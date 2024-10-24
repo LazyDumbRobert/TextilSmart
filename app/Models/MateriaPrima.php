@@ -12,4 +12,9 @@ class MateriaPrima extends Model
     {
         return $this->belongsTo(Proveedor::class);
     }
+
+    public function ocs()
+    {
+        return $this->hasMany(OrdenCompra::class,'mp_id');
+    }
 }

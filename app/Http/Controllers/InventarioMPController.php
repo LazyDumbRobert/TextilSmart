@@ -62,4 +62,9 @@ class InventarioMPController extends Controller
     {
         //
     }
+
+    public function transacciones(MateriaPrima $materiaprima)
+    {
+        return view('inventarioMP.transacciones',compact('materiaprima'));
+    }
 }
