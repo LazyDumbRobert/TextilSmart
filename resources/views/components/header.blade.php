@@ -11,8 +11,11 @@
             @endguest
             
             @auth
-                <a class=" hover:text-gray-400 cursor-pointer">Mis Pedidos</a>
-                <a class=" hover:text-gray-400 cursor-pointer">Carrito</a>
+                <a href="{{ route('pedidios') }}" class=" hover:text-gray-400 cursor-pointer">Mis Pedidos</a>
+                <a href="{{ route('carrito') }}" class=" hover:text-gray-400 cursor-pointer flex flex-row gap-1 justify-center items-center">
+                    <p class="bg-indigo-800 px-1.5 rounded">{{$cartCollection->count()}}</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
 
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf

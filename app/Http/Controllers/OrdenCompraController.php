@@ -62,4 +62,9 @@ class OrdenCompraController extends Controller
     {
         //
     }
+
+    public function ordenCompra(OrdenCompra $ordencompra)
+    {   
+        return view('oc.doc',compact('ordencompra'));
+    }
 }

@@ -7,7 +7,7 @@
 @section('contenido')
 
 
-    <div class="mt-10">
+    <div class="my-10">
         <div class="text-center">
             <h2 class="uppercase  font-bold text-3xl">Todos nuestros productos</h2>
         </div>

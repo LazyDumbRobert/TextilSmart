@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Header extends Component
+class OrdenCompra extends Component
 {
     /**
      * Create a new component instance.
@@ -21,8 +21,6 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        $cartCollection = \Cart::getContent();
-        
-        return view('components.header',compact(['cartCollection']));
+        return view('components.orden-compra');
     }
 }

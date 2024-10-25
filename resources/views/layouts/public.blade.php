@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <title>TextilSmart - @yield('titulo')</title>
     @vite('resources/css/app.css')
+    @livewireStyles
+    @stack('styles')
 </head>
 <body class="flex flex-col justify-between h-screen">
     <x-header />
@@ -21,5 +23,8 @@
     <script>
         AOS.init();
     </script>
+
+    @livewireScripts
+    @stack('scripts')
 </body>
 </html>

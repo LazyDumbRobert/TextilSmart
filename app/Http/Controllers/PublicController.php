@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedido;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
@@ -10,13 +11,32 @@ class PublicController extends Controller
     
     public function index()
     {
-        $productos = Producto::limit(3)->get();
+        $productos = Producto::where('stock', '>', 1)->limit(3)->get();
         return view('public.index',compact(['productos']));
     }
 
     public function productos()
     {
-        $productos = Producto::all();
+        $productos = Producto::where('stock', '>', 1)->get();
         return view('public.productos', compact(['productos']));
+    }
+
+    public function exito(Request $request)
+    {
+         if (!$request->session()->has('token')) {
+            return redirect()->route('home'); 
+        }
+
+        $token = $request->session()->get('token');
+        $request->session()->forget('token');
+
+        return view('public.exito', compact('token'));
+        return view('public.exito');
+    }
+
+    public function pedidos()
+    {
+        $pedidos = Pedido::where('user_id',auth()->user()->id)->get();
+        return view('public.pedidos',compact('pedidos'));
     }
 }

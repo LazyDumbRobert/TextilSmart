@@ -20,3 +20,4 @@ Route::get('/inventario/materia-prima/edit/{materiaprima:nombre}',[InventarioMPC
 Route::get('/ordenes-compra',[OrdenCompraController::class,'index'])->name('oc');
 Route::get('/ordenes-compra/create',[OrdenCompraController::class,'create'])->name('oc.create');
 Route::get('/ordenes-compra/show/{ordencompra}',[OrdenCompraController::class,'show'])->name('oc.show');
+Route::get('/orden-compra/{ordencompra}',[OrdenCompraController::class,'ordenCompra'])->name('oc.doc');

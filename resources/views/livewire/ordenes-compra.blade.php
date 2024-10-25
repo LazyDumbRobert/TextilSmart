@@ -26,6 +26,7 @@
                     <th class="encabezado">Fecha de Creación</th>
                     <th class="encabezado">Estado</th>
                     <th class="encabezado">Ver</th>
+                    <th class="encabezado">Documento</th>
                 </tr>
             </thead>
             <tbody class="table-body">
@@ -40,6 +41,11 @@
                         <td class="registro">
                             <a href="{{ route('oc.show',$oc) }}" class=" p-2 text-white uppercase font-bold rounded-xl bg-green-500 hover:bg-green-600">
                                 Ver OC
+                            </a>
+                        </td>
+                        <td class="registro">
+                            <a href="{{ route('oc.doc',$oc) }}" target="_blank">
+                                <i class="fa-solid fa-file text-2xl hover:text-gray-600"></i>
                             </a>
                         </td>
                     </tr>
