@@ -11,4 +11,9 @@ class OrdenProduccionDetalle extends Model
         'materia_prima_id',
         'cantidad_utilizada',  
     ];
+
+    public function materiaPrima()
+    {
+       return  $this->belongsTo(MateriaPrima::class);
+    }
 }

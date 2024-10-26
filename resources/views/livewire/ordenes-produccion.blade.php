@@ -43,6 +43,18 @@
                         <td class="registro">{{ $orden->producto->nombre }}</td>
                         <td class="registro">{{ $orden->fecha_ejecucion->format('d-m-Y') }}</td>
                         <td class="registro">{{ $orden->estado->estado }}</td>
+                        <td class="registro">
+                            @if ($orden->estado_id == 1 || $orden->estado_id == 3)
+                                <a href="{{ route('produccion.show',$orden) }}">
+                                    <i class="fa-solid fa-eye text-xl hover:text-gray-600 cursor-pointer"></i>
+                                </a>
+                            @elseif ($orden->estado_id == 2)
+                                <a href="{{ route('produccion.rendimiento',$orden) }}">
+                                    <i class="fa-solid fa-pen-to-square text-xl hover:text-gray-600 cursor-pointer"></i>   
+                                </a>
+                            @endif
+                           
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

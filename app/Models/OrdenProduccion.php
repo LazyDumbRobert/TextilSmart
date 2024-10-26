@@ -34,4 +34,9 @@ class OrdenProduccion extends Model
     {
         return $this->belongsTo(Estado::class); 
     }
+
+    public function materiasPrimas()
+    {
+        return $this->hasMany(OrdenProduccionDetalle::class);
+    }
 }
