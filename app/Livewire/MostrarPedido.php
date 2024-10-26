@@ -15,6 +15,14 @@ class MostrarPedido extends Component
 
         return redirect()->route('pedidos')->with('success','Pedido Procesado Correctamente');
     }
+
+    public function entregarPedido()
+    {
+        $this->pedido->estado_id = 3;
+        $this->pedido->save();
+
+        return redirect()->route('pedidos')->with('success','Pedido Actualizado Correctamente');
+    }
     
     public function render()
     {

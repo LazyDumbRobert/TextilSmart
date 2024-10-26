@@ -40,3 +40,4 @@ require __DIR__.'/auth.php';
 require __DIR__.'/inventario.php';
 require __DIR__.'/proveedores.php';
 require __DIR__.'/pedidos.php';
+require __DIR__.'/produccion.php';

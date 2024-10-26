@@ -37,19 +37,16 @@
                     Pedidos
                 </a>
 
+                <a href="{{ route('produccion') }}" class="{{  Route::is('produccion*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
+                    <i class="fa-solid fa-database"></i>
+                    Producción
+                </a>
 
                 <a href="{{ route('notificaciones') }}" class="{{  Route::is('notificaciones*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
                     <span class="bg-indigo-800 px-2 py-0.5 rounded-lg text-white font-bold">{{ auth()->user()->unreadNotifications->count() }}</span>
                     Notificaciones
                 </a>
 
-                  
-              
-
-                {{-- <a href="" class="{{  Route::is('produccion*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
-                    <i class="fa-solid fa-database"></i>
-                    Producción
-                </a> --}}
 
 {{-- 
                 <a href="" class="{{  Route::is('productos*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">

@@ -1,4 +1,19 @@
     <div class="mt-10">
+        <form wire:submit.prevent="mostrarDatos" class="flex flex-row justify-end items-center gap-2 mb-5 mt-5">
+        
+            <div class="flex justify-end items-center gap-5">
+                <select wire:model="estado" id="">
+                    @foreach ($estados as $estado)
+                        <option value="{{ $estado->id }}">{{ $estado->estado }}s</option>
+                    @endforeach
+                        <option value="10">Todas</option>
+                </select>
+               
+            </div>
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass text-2xl hover:bg-gray-200 p-2 rounded-xl"></i>
+            </button>
+        </form>
         <table class="table">
             <thead>
                 <tr>
@@ -27,5 +42,9 @@
                 @endforeach
             </tbody>
         </table>
+
+        <div class="mt-4">
+            {{ $pedidos->links() }} 
+        </div>
     </div>
 

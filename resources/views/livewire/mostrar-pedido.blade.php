@@ -31,11 +31,17 @@
         <livewire:rastreo-pedido :pedido="$pedido"/>
     @endrole
 
-    @if ($pedido->estado_id = 1)
+    @if ($pedido->estado_id == 1)
         @role('admin')
             <button wire:click="confirmarPedido()" class="btn bg-indigo-600 hover:bg-indigo-800">
                 ¡Orden Enviada!
             </button> 
         @endrole
+    @elseif( $pedido->estado_id == 2)
+            @role('admin')
+                <button wire:click="entregarPedido()" class="btn bg-indigo-600 hover:bg-indigo-800">
+                    ¡El pedido fue entregado!
+                </button>
+            @endrole
     @endif
 </div>
