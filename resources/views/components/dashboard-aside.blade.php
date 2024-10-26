@@ -32,7 +32,7 @@
                     Inventario Productos
                 </a>
 
-                <a href="" class="{{  Route::is('pedidos*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
+                <a href="{{ route('pedidos') }}" class="{{  Route::is('pedidos*') ? 'bg-indigo-900 text-white' : '' }}  p-2 hover:bg-indigo-900  transition-colors duration-300  hover:text-white rounded">
                     <i class="fa-solid fa-truck"></i>
                     Pedidos
                 </a>

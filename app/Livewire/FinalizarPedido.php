@@ -3,12 +3,14 @@
 namespace App\Livewire;
 
 use Cart;
+use App\Models\User;
 use App\Models\Pedido;
 use Livewire\Component;
 use App\Models\Producto;
 use Illuminate\Support\Str;
 use App\Models\PedidoDetalle;
 use Illuminate\Support\Carbon;
+use App\Notifications\NotificacionPedido;
 
 class FinalizarPedido extends Component
 {
@@ -48,6 +50,10 @@ class FinalizarPedido extends Component
 
             \Cart::clear();
             $token = Str::random(32);
+            
+            $usuario = User::find(5);
+            $usuario->notify(new NotificacionPedido($pedido));
+            
             return redirect()->route('pedido.exito')->with('token',$token);
 
         } catch (\Throwable $th) {

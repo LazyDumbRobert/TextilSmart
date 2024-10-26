@@ -17,6 +17,10 @@ class ProductoCarrito extends Component
     }
     public function agrgarProducto()
     {
+        if(!auth()->user()->email_verified_at)
+        {
+            return redirect()->route('carrito');
+        }
         if($this->producto->stock > 0){
             \Cart::add(array(
                 'id' => $this->producto->id,

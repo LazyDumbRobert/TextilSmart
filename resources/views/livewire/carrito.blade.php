@@ -1,6 +1,6 @@
 <div>
     @if ($items->count() > 0)
-        <h2 class="text-4xl font-bold uppercase">CARRITO</h2>
+        <h2 class="text-4xl font-bold uppercase text-center">CARRITO</h2>
         <div class="flex flex-row justify-center items-center">
             <div class="grid grid-cols-2 gap-5">
                 @foreach ($items as $row)

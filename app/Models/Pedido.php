@@ -15,4 +15,23 @@ class Pedido extends Model
         'direccion_entrega',
         'costo_envio',
     ];
+
+    protected $casts = [
+        'fecha_pedido' => 'datetime',
+    ];
+
+    public function productos()
+    {
+        return $this->hasMany(PedidoDetalle::class);
+    }
+
+    public function estado()
+    {
+        return $this->belongsTo(Estado::class);
+    }
+
+    public function usuario()
+    {
+        return $this->belongsTo(User::class,'user_id','id');
+    }
 }

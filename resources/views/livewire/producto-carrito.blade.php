@@ -8,10 +8,10 @@
         <div class="mt-10">
             @auth
                 @if (!$flag)
-                    <button wire:click="$dispatch('agregar')" class="bg-indigo-600 rounded p-2 text-white font-bold">
-                        <i class="fa-solid fa-plus"></i>
-                        Agregar al carrito
-                    </button>
+                        <button wire:click="$dispatch('agregar')" class="bg-indigo-600 rounded p-2 text-white font-bold">
+                            <i class="fa-solid fa-plus"></i>
+                            Agregar al carrito
+                        </button> 
                 @else
                     <button wire:click="$dispatch('eliminar')" class="bg-red-600 rounded p-2 text-white font-bold">
                         <i class="fa-solid fa-circle-xmark"></i>

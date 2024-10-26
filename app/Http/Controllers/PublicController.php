@@ -34,9 +34,4 @@ class PublicController extends Controller
         return view('public.exito');
     }
 
-    public function pedidos()
-    {
-        $pedidos = Pedido::where('user_id',auth()->user()->id)->get();
-        return view('public.pedidos',compact('pedidos'));
-    }
 }
